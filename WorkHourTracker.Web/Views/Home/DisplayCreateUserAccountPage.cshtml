@@ -1,0 +1,89 @@
+﻿
+@{
+    Layout = null;
+    ViewData["Title"] = "CreateUserAccount";
+}
+@model WorkHourTracker.Web.Models.CreateUserAccountInput
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Work Hour Tracker - UserLogin</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <h2>CreateUserAccount</h2>
+
+    <div class="container">
+        <form asp-action="CreateUserAccount" asp-controller="Home">
+            <div>
+                @if (TempData.Peek("ModelErrors") != null)
+                {
+                    foreach (var errorMessage in (string[])@TempData["ModelErrors"])
+                    {
+                        <p style="color:red">@errorMessage</p>
+                    }
+                }
+            </div>
+            <div>
+                <label asp-for="FirstName"></label>
+                <div>
+                    <input asp-for="FirstName" type="text" placeholder="FirstName" />
+                </div>
+            </div>
+
+            <div>
+                <label asp-for="LastName"></label>
+                <div>
+                    <input asp-for="LastName" type="text" placeholder="LastName" />
+                </div>
+            </div>
+
+            <div>
+                <label asp-for="UserName"></label>
+                <div>
+                    <input asp-for="UserName" type="text" placeholder="UserName" />
+                </div>
+            </div>
+
+            <div>
+                <label asp-for="UserPassword"></label>
+                <div>
+                    <input asp-for="UserPassword" type="password" placeholder="Password" />
+                </div>
+            </div>
+
+            <div>
+                <label asp-for="UserRole"></label>
+                <div>
+                    <input asp-for="UserRole" type="text" placeholder="UserRole" />
+                </div>
+            </div>
+
+            <br />
+            <div>
+                <input class="btn-sm btn-success" type="submit" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

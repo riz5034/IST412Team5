@@ -1,0 +1,12 @@
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Data.deps.json
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Data.dll
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Data.pdb
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.dll
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.pdb
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.csprojAssemblyReference.cache
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.csproj.CoreCompileInputs.cache
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.AssemblyInfoInputs.cache
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.AssemblyInfo.cs
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.csproj.CopyComplete
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.dll
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.pdb

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "CreateProject";
+}
+@model WorkHourTracker.Web.Models.CreateProjectInput
+<h2>CreateProject</h2>
+<p>Create a new project. Assign the project a name and code name.</p>
+<div class="container">
+    <div class="form-group">
+        <div>
+            @if (TempData.Peek("CreateProject") != null)
+            {
+                foreach (var message in (string[])TempData["CreateProject"])
+                {
+                    <p style="color: green">@message</p>
+                }
+            }
+        </div>
+        <form asp-action="SaveNewProject" asp-controller="ProjectManager">
+            <div>
+                <label asp-for="ProjectName"></label>
+                <div>
+                    <input asp-for="ProjectName" type="text" placeholder="MyProject" />
+                </div>
+            </div>
+
+            <div>
+                <label asp-for="ProjectCodeName"></label>
+                <div>
+                    <input asp-for="ProjectCodeName" type="text" placeholder="MyProj"/>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn-success">Create</button>
+            </div>
+        </form>
+
+
+    </div>
+</div>
+

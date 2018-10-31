@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+using WorkHourTracker.Model.Entities;
+
+namespace WorkHourTracker.Domain.Interfaces
+{
+   public interface IProjectManagerDomain
+    {
+        Task CreateNewProject(CreateProjectDatabaseInput input);
+    }
+}

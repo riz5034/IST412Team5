@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = null;
+}
+@model WorkHourTracker.Web.Models.UserLoginInput;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Work Hour Tracker - UserLogin</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <div class="container pull-right">
+        <div class="form-group">
+            <h1>Work Hour Tracker</h1>
+            <h3>Login</h3>
+            <p>Please enter your user name and password to access the application.</p>
+            <div class="container">
+                <div>
+                    @if (TempData.Peek("LoginErrors") != null)
+                    {
+                        foreach (var errorMessage in (string[])@TempData["LoginErrors"])
+                        {
+                            <p style="color: red">@errorMessage</p>
+                        }
+                    }
+                </div>
+            </div>
+            <form asp-action="ProcessLogin" asp-controller="Home">
+                <div>
+                    <label asp-for="UserName"></label>
+                    <div>
+                        <input asp-for="UserName" type="text" placeholder="UserName" />
+                    </div>
+                </div>
+                <div>
+                    <label asp-for="Password"></label>
+                    <div>
+                        <input asp-for="Password" type="password" placeholder="Password" />
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <input class="btn-sm btn-success" type="submit" />
+                </div>
+
+
+            </form>
+        </div>
+        <a asp-area="" asp-action="DisplayCreateUserAccountPage" asp-controller="Home">Create An Account</a>
+    </div>
+</body>
+</html>

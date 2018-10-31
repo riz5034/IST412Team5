@@ -1,0 +1,9 @@
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Model\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.deps.json
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Model\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.dll
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Model\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.pdb
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.csprojAssemblyReference.cache
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.csproj.CoreCompileInputs.cache
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.AssemblyInfoInputs.cache
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.AssemblyInfo.cs
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.dll
+C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.pdb
