@@ -82,7 +82,7 @@ namespace WorkHourTracker.Web.Controllers
 
                 return RedirectTo("Home", "UserLogin");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 resultList.Errors.Add("An unexpected error occured.");
                 TempData.Add("LoginErrors", resultList.Errors);
