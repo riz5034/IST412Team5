@@ -42,3 +42,47 @@ C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Web\obj\Deb
 C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\ProjectManager\CreateProject.g.cshtml.cs
 C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\CreateUserAccount.g.cshtml.cs
 C:\Users\dds51\Desktop\IST412Project\WorkHourTracker\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\DisplayCreateUserAccountPage.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Web.deps.json
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Web.runtimeconfig.json
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Web.runtimeconfig.dev.json
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Web.dll
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Web.pdb
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Web.Views.dll
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Web.Views.pdb
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Data.dll
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Domain.dll
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.dll
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Domain.pdb
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.pdb
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\bin\Debug\netcoreapp2.1\WorkHourTracker.Data.pdb
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.csprojAssemblyReference.cache
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.csproj.CoreCompileInputs.cache
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.RazorAssemblyInfo.cache
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.RazorAssemblyInfo.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.AssemblyInfoInputs.cache
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.AssemblyInfo.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.TagHelpers.input.cache
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.TagHelpers.output.cache
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.RazorCoreGenerate.cache
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Employee\EmployeeTrackTime.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\CreateUserAccount.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\DisplayCreateUserAccountPage.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserLogin.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\ProjectManager\AssignProject.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\ProjectManager\CreateProject.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.RazorTargetAssemblyInfo.cache
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.RazorTargetAssemblyInfo.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.Views.pdb
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.csproj.CopyComplete
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.dll
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.pdb

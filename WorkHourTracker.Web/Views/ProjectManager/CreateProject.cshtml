@@ -8,11 +8,20 @@
 <div class="container">
     <div class="form-group">
         <div>
-            @if (TempData.Peek("CreateProject") != null)
+            @if (TempData.Peek("CreateProjectSuccess") != null)
             {
-                foreach (var message in (string[])TempData["CreateProject"])
+                foreach (var message in (string[])TempData["CreateProjectSuccess"])
                 {
                     <p style="color: green">@message</p>
+                }
+            }
+        </div>
+        <div>
+            @if (TempData.Peek("CreateProjectError") != null)
+            {
+                foreach (var message in (string[])TempData["CreateProjectError"])
+                {
+                    <p style="color: red">@message</p>
                 }
             }
         </div>
@@ -27,7 +36,7 @@
             <div>
                 <label asp-for="ProjectCodeName"></label>
                 <div>
-                    <input asp-for="ProjectCodeName" type="text" placeholder="MyProj"/>
+                    <input asp-for="ProjectCodeName" type="text" placeholder="MyProj" />
                 </div>
             </div>
             <div>

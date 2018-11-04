@@ -13,7 +13,7 @@ namespace WorkHourTracker.Web.Models
         public string ProjectName { get; set; }
 
         [Required]
-        [MaxLength(10)]
+        [MaxLength(20)]
         public string ProjectCodeName { get; set; }
 
     }

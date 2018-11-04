@@ -53,13 +53,14 @@ namespace WorkHourTracker.Web.Controllers
             {
                 //send the request to the Domain layer
                 await _IProjectManagerDomain.CreateNewProject(databaseInput);
-                resultList.Errors.Add($"Project: {databaseInput.ProjectName} Project CodeName: {databaseInput.ProjectCodeName} has been created. Please assign the project to indivduals to being working on it.");
-                TempData.Add("CreateProject", resultList.Errors);
+                resultList.Errors.Add($"Project: {databaseInput.ProjectName}<br/>Project CodeName: {databaseInput.ProjectCodeName} has been created. Please assign the project to indivduals to being working on it.");
+                TempData.Add("CreateProjectSuccess", resultList.Errors);
             }
             catch (Exception)
             {
-
-                throw;
+                resultList.Errors.Add("The ProjectName or ProjectCodeName is already in use in the system. Please use another one.");
+                TempData.Add("CreateProjectError", resultList.Errors);
+                return RedirectTo("ProjectManager", "CreateProject");
             }
 
 
