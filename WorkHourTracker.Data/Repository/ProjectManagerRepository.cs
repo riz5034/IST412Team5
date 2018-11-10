@@ -32,5 +32,18 @@ namespace WorkHourTracker.Data.Repository
                 await connection.ExecuteAsync("sp_CreateProject", p, commandType: CommandType.StoredProcedure);
             }
         }
+
+        public async Task AssignProject(AssignProjectToEmployeeDatabaseInput input)
+        {
+            var p = new DynamicParameters();
+            p.Add("@p_AssignedEmployeeUserName", input.AssignedUserName);
+            p.Add("@p_AssignedProjectName", input.AssignedProjectName);
+            p.Add("@p_CreateUser", input.CreateUser);
+
+            using (IDbConnection connection = new SqlConnection(_connectionString))
+            {
+                await connection.ExecuteAsync("sp_AssignProjectToEmployee", p, commandType: CommandType.StoredProcedure);
+            }
+        }
     }
 }

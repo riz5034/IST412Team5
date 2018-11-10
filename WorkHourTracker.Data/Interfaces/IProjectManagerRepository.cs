@@ -9,5 +9,6 @@ namespace WorkHourTracker.Data.Interfaces
    public interface IProjectManagerRepository
     {
         Task CreateNewProject(CreateProjectDatabaseInput input);
+        Task AssignProject(AssignProjectToEmployeeDatabaseInput input);
     }
 }

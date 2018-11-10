@@ -9,5 +9,6 @@ namespace WorkHourTracker.Domain.Interfaces
    public interface IProjectManagerDomain
     {
         Task CreateNewProject(CreateProjectDatabaseInput input);
+        Task AssignProject(AssignProjectToEmployeeDatabaseInput input);
     }
 }
