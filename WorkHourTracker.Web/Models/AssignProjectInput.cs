@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WorkHourTracker.Web.Models
 {
-    public class AssignProject
+    public class AssignProjectInput
     {
         [Required]
         [MaxLength(50)]

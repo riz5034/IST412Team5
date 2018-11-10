@@ -22,3 +22,15 @@ C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.csproj.CopyComplete
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.dll
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.pdb
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Data.deps.json
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Data.dll
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Data.pdb
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.dll
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.pdb
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.csprojAssemblyReference.cache
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.csproj.CoreCompileInputs.cache
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.AssemblyInfoInputs.cache
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.AssemblyInfo.cs
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.csproj.CopyComplete
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.dll
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Data\obj\Debug\netcoreapp2.1\WorkHourTracker.Data.pdb

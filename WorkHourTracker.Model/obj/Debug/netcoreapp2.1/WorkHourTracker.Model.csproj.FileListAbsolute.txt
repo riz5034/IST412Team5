@@ -16,3 +16,12 @@ C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.AssemblyInfo.cs
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.dll
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.pdb
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Model\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.deps.json
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Model\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.dll
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Model\bin\Debug\netcoreapp2.1\WorkHourTracker.Model.pdb
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.csprojAssemblyReference.cache
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.csproj.CoreCompileInputs.cache
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.AssemblyInfoInputs.cache
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.AssemblyInfo.cs
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.dll
+D:\PSU\Fall 2018\IST 412 - Complex Software Systems\IST412Team5\WorkHourTracker.Model\obj\Debug\netcoreapp2.1\WorkHourTracker.Model.pdb

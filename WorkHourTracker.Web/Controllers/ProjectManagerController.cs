@@ -94,5 +94,10 @@ namespace WorkHourTracker.Web.Controllers
                 action = actionMethodName
             });
         }
+
+        public async Task<IActionResult> SaveProjectAssignment(WorkHourTracker.Web.Models.AssignProjectInput input)
+        {
+            return View();
+        }
     }
 }
