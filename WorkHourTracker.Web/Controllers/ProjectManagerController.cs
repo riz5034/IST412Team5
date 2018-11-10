@@ -103,6 +103,30 @@ namespace WorkHourTracker.Web.Controllers
         /// <returns></returns>
         public async Task<IActionResult> SaveProjectAssignment(WorkHourTracker.Web.Models.AssignProjectInput input)
         {
+            // Check to see if ViewModel is valid
+            // This will end the process and return the ModelState telling the user what went wrong
+            if(!ModelState.IsValid) { return BadRequest(ModelState); }
+
+            // Create a WorkHourTrackerListResult object and initializes its properties
+            var resultList = new WorkHourTrackerListResult() { Errors = new List<string>(), WorkHourTrackList = new List<dynamic>() };
+
+            // Since ViewModel input is valid, transform it into the DTO to transfer to other layers
+            var databaseInput = new AssignProjectToEmployeeDatabaseInput(input.AssignedProjectName, input.AssignedUserName);
+
+            try
+            {
+                /*
+                await _IProjectManagerDomain.AssignProject(databaseInput);
+                resultList.Errors.Add("The project has been successfully assigned!");
+                TempData.Add("AssignedProjectSuccess", resultList.Errors);
+                */
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
             return View();
         }
     }

@@ -7,7 +7,7 @@ namespace WorkHourTracker.Model.Entities
     /// <summary>
     /// This class will be the object that holds the properties needed to assign a project to an employee
     /// </summary>
-    class AssignProjectToEmployeeDatabaseInput
+    public class AssignProjectToEmployeeDatabaseInput
     {
         public string AssignedProjectName { get; set; }
         public string AssignedUserName { get; set; }
