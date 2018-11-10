@@ -95,6 +95,12 @@ namespace WorkHourTracker.Web.Controllers
             });
         }
 
+        /// <summary>
+        /// This method will return the View where there project manager
+        /// can save a project assignment
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public async Task<IActionResult> SaveProjectAssignment(WorkHourTracker.Web.Models.AssignProjectInput input)
         {
             return View();
