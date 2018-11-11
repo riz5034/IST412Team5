@@ -2,26 +2,35 @@
 @{
     ViewData["Title"] = "AssignProject";
 }
+@*Link the ViewModel for AssignProject*@
+@model WorkHourTracker.Web.Models.AssignProjectInput
 
 <h2>AssignProject</h2>
 <p>Your role is: @TempData.Peek("userRole").ToString()</p>
 <p>Assign an employee to a project here.</p>
 
-<div class="container">
-    <div class="form-group">
-        <div>
-            <form>
-                <span>
-                    Assign:
-                    <label ></label>
-                    <input  type="text" placeholder="MyProject" />
-                    To:
-                    <label></label>
-                    <input type="text" placeholder="MyProject" />
-                    <button>Assign</button>
-                </span>
-            </form>
-        </div>
-    </div>
-</div>
+@*Link the ViewModel for AssignProject*@
+<form asp-action="SaveProjectAssignment" asp-controller="ProjectManager">
+    <span>
+        Assign:
+        <label asp-for="AssignedProjectName"></label>
+        <input asp-for="AssignedProjectName" type="text" placeholder="MyProject"/>
+        To:
+        <label asp-for="AssignedUserName"></label>
+        <input asp-for="AssignedUserName" type="text" placeholder="Employee's UserName"/>
+        <button type="submit" class="btn-success">Assign</button>
+    </span>
+</form>
 
+@*The code peeks at the TempData's "AssignedProjectSuccess" key to see if the value is not null
+    If this is true then the application will foreach loop through the TempData's AssignedProjectSuccess object
+    and display each message*@
+<div>
+    @if(TempData.Peek("AssignedProjectSuccess") != null)
+    {
+        foreach(var message in (string[])TempData["AssignedProjectSuccess"])
+        {
+            <p style="color: green">@message</p>
+        }
+    }
+</div>

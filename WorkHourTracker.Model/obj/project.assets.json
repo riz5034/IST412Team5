@@ -681,23 +681,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dds51\\.nuget\\packages\\": {},
+    "C:\\Users\\Ricky Zhao\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dds51\\Desktop\\SchoolWork\\IST 412\\WorkHourTrackerGitRepo\\WorkHourTracker.Model\\WorkHourTracker.Model.csproj",
+      "projectUniqueName": "D:\\PSU\\Fall 2018\\IST 412 - Complex Software Systems\\IST412Team5\\WorkHourTracker.Model\\WorkHourTracker.Model.csproj",
       "projectName": "WorkHourTracker.Model",
-      "projectPath": "C:\\Users\\dds51\\Desktop\\SchoolWork\\IST 412\\WorkHourTrackerGitRepo\\WorkHourTracker.Model\\WorkHourTracker.Model.csproj",
-      "packagesPath": "C:\\Users\\dds51\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dds51\\Desktop\\SchoolWork\\IST 412\\WorkHourTrackerGitRepo\\WorkHourTracker.Model\\obj\\",
+      "projectPath": "D:\\PSU\\Fall 2018\\IST 412 - Complex Software Systems\\IST412Team5\\WorkHourTracker.Model\\WorkHourTracker.Model.csproj",
+      "packagesPath": "C:\\Users\\Ricky Zhao\\.nuget\\packages\\",
+      "outputPath": "D:\\PSU\\Fall 2018\\IST 412 - Complex Software Systems\\IST412Team5\\WorkHourTracker.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dds51\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ricky Zhao\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

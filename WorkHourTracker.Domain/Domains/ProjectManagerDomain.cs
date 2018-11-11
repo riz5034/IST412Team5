@@ -23,6 +23,10 @@ namespace WorkHourTracker.Domain.Domains
             await _IProjectManagerRepository.CreateNewProject(input);
         }
 
+        public async Task AssignProject(AssignProjectToEmployeeDatabaseInput input)
+        {
+            await _IProjectManagerRepository.AssignProject(input);
+        }
 
     }
 }

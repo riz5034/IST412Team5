@@ -490,10 +490,11 @@
   },
   "libraries": {
     "Dapper/1.50.5": {
-      "sha512": "1vPpX7WQmQCIb7rwlGOUoVs/yWZhVKvdhuG7WrJV+V+qsP8btnrrCqVWHENAlJxBAnUw5rhWfmuba9/Egei9MA==",
+      "sha512": "AzAdZ9fEzUtav3Sbc5CMgz5O2oYkc5g1r+g1h/Vn+wqcInII+xtNEfyZryeW90Wq72bxjEBJhe18j+2SrGrc5A==",
       "type": "package",
       "path": "dapper/1.50.5",
       "files": [
+        ".signature.p7s",
         "dapper.1.50.5.nupkg.sha512",
         "dapper.nuspec",
         "lib/net451/Dapper.dll",
@@ -1426,10 +1427,11 @@
       ]
     },
     "System.Reflection.TypeExtensions/4.4.0": {
-      "sha512": "dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
+      "sha512": "JRxOAH6by+wn1gNnZc9jf2HbO/szhMJuLY2w44nEW77354WntXlFzWSVkx6280Uvcl3URZ/At+444vjX0/X1Aw==",
       "type": "package",
       "path": "system.reflection.typeextensions/4.4.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -1845,23 +1847,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dds51\\.nuget\\packages\\": {},
+    "C:\\Users\\Ricky Zhao\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dds51\\Desktop\\SchoolWork\\IST 412\\WorkHourTrackerGitRepo\\WorkHourTracker.Data\\WorkHourTracker.Data.csproj",
+      "projectUniqueName": "D:\\PSU\\Fall 2018\\IST 412 - Complex Software Systems\\IST412Team5\\WorkHourTracker.Data\\WorkHourTracker.Data.csproj",
       "projectName": "WorkHourTracker.Data",
-      "projectPath": "C:\\Users\\dds51\\Desktop\\SchoolWork\\IST 412\\WorkHourTrackerGitRepo\\WorkHourTracker.Data\\WorkHourTracker.Data.csproj",
-      "packagesPath": "C:\\Users\\dds51\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dds51\\Desktop\\SchoolWork\\IST 412\\WorkHourTrackerGitRepo\\WorkHourTracker.Data\\obj\\",
+      "projectPath": "D:\\PSU\\Fall 2018\\IST 412 - Complex Software Systems\\IST412Team5\\WorkHourTracker.Data\\WorkHourTracker.Data.csproj",
+      "packagesPath": "C:\\Users\\Ricky Zhao\\.nuget\\packages\\",
+      "outputPath": "D:\\PSU\\Fall 2018\\IST 412 - Complex Software Systems\\IST412Team5\\WorkHourTracker.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dds51\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ricky Zhao\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1874,8 +1876,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\dds51\\Desktop\\SchoolWork\\IST 412\\WorkHourTrackerGitRepo\\WorkHourTracker.Model\\WorkHourTracker.Model.csproj": {
-              "projectPath": "C:\\Users\\dds51\\Desktop\\SchoolWork\\IST 412\\WorkHourTrackerGitRepo\\WorkHourTracker.Model\\WorkHourTracker.Model.csproj"
+            "D:\\PSU\\Fall 2018\\IST 412 - Complex Software Systems\\IST412Team5\\WorkHourTracker.Model\\WorkHourTracker.Model.csproj": {
+              "projectPath": "D:\\PSU\\Fall 2018\\IST 412 - Complex Software Systems\\IST412Team5\\WorkHourTracker.Model\\WorkHourTracker.Model.csproj"
             }
           }
         }
