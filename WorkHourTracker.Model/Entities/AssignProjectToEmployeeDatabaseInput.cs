@@ -11,7 +11,7 @@ namespace WorkHourTracker.Model.Entities
     {
         public string AssignedProjectName { get; set; }
         public string AssignedUserName { get; set; }
-        public object CreateUser { get; set; }
+        public string CreateUser { get; set; }
 
         public AssignProjectToEmployeeDatabaseInput(string projectName, string userName)
         {
