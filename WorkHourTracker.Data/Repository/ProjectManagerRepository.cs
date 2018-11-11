@@ -41,18 +41,18 @@ namespace WorkHourTracker.Data.Repository
             p.Add("@p_CreateUser", input.CreateUser);
 
             var validUserNameAndProject = new DynamicParameters();
-            p.Add("@p_UserName", input.AssignedUserName);
-            p.Add("@p_ProjectName", input.AssignedProjectName);
+            validUserNameAndProject.Add("@p_UserName", input.AssignedUserName);
+            validUserNameAndProject.Add("@p_ProjectName", input.AssignedProjectName);
 
             using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 bool isValid = false;
 
-                isValid = await connection.QueryFirstAsync<bool>("sp_IsAssignAProjectInputValid", p, commandType: CommandType.StoredProcedure);
+                isValid = await connection.QueryFirstAsync<bool>("sp_IsAssignAProjectInputValid", validUserNameAndProject, commandType: CommandType.StoredProcedure);
 
                 if (!isValid)
                 {
-
+                    throw new AssignAProjectException("Either the UserName or ProjectName you entered is invalid. Please try again");
                 }
 
                 await connection.ExecuteAsync("sp_AssignProjectToEmployee", p, commandType: CommandType.StoredProcedure);

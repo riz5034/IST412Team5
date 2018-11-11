@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using WorkHourTracker.Web.Models;
 using WorkHourTracker.Web.Infrastructure;
 using WorkHourTracker.Model.Entities;
+using WorkHourTracker.Model.Exceptions;
 using WorkHourTracker.Domain.Interfaces;
 using WorkHourTracker.Domain.Domains;
 
@@ -122,6 +123,11 @@ namespace WorkHourTracker.Web.Controllers
                 resultList.Errors.Add("The project has been successfully assigned!");
                 TempData.Add("AssignedProjectSuccess", resultList.Errors);
 
+            }
+            catch (AssignAProjectException ex)
+            {
+                resultList.Errors.Add(ex.Message);
+                TempData.Add("AssignedProjectError", resultList.Errors);
             }
             catch (Exception)
             {
