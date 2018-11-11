@@ -114,12 +114,10 @@ namespace WorkHourTracker.Web.Controllers
             var databaseInput = new AssignProjectToEmployeeDatabaseInput(input.AssignedProjectName, input.AssignedUserName, TempData.Peek("userName").ToString());
 
             try
-            {
-                /*
+            { 
                 await _IProjectManagerDomain.AssignProject(databaseInput);
                 resultList.Errors.Add("The project has been successfully assigned!");
                 TempData.Add("AssignedProjectSuccess", resultList.Errors);
-                */
             }
             catch (Exception)
             {

@@ -13,7 +13,7 @@ namespace WorkHourTracker.Web.Models
         public string AssignedUserName { get; set; }
 
         [Required]
-        [MaxLength(20)]
+        [MaxLength(50)]
         public string AssignedProjectName { get; set; }
     }
 }
