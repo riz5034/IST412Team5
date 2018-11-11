@@ -111,7 +111,7 @@ namespace WorkHourTracker.Web.Controllers
             var resultList = new WorkHourTrackerListResult() { Errors = new List<string>(), WorkHourTrackList = new List<dynamic>() };
 
             // Since ViewModel input is valid, transform it into the DTO to transfer to other layers
-            var databaseInput = new AssignProjectToEmployeeDatabaseInput(input.AssignedProjectName, input.AssignedUserName);
+            var databaseInput = new AssignProjectToEmployeeDatabaseInput(input.AssignedProjectName, input.AssignedUserName, TempData.Peek("userName").ToString());
 
             try
             {
@@ -127,7 +127,7 @@ namespace WorkHourTracker.Web.Controllers
                 throw;
             }
 
-            return View();
+            return RedirectTo("ProjectManager", "AssignProject");
         }
     }
 }
