@@ -75,7 +75,7 @@ namespace WorkHourTracker.Web.Controllers
         /// can assign a project to an employee
         /// </summary>
         /// <returns></returns>
-        public async Task<IActionResult> AssignProject()
+        public IActionResult AssignProject()
         {
             return View();
         }
@@ -111,15 +111,17 @@ namespace WorkHourTracker.Web.Controllers
             var resultList = new WorkHourTrackerListResult() { Errors = new List<string>(), WorkHourTrackList = new List<dynamic>() };
 
             // Since ViewModel input is valid, transform it into the DTO to transfer to other layers
-            var databaseInput = new AssignProjectToEmployeeDatabaseInput(input.AssignedProjectName, input.AssignedUserName);
+            var databaseInput = new AssignProjectToEmployeeDatabaseInput(input.AssignedProjectName,
+                                                                         input.AssignedUserName,
+                                                                         TempData.Peek("userName").ToString());
 
             try
             {
-                /*
+
                 await _IProjectManagerDomain.AssignProject(databaseInput);
                 resultList.Errors.Add("The project has been successfully assigned!");
                 TempData.Add("AssignedProjectSuccess", resultList.Errors);
-                */
+
             }
             catch (Exception)
             {
@@ -127,7 +129,7 @@ namespace WorkHourTracker.Web.Controllers
                 throw;
             }
 
-            return View();
+            return RedirectTo("ProjectManager", "AssignProject");
         }
     }
 }

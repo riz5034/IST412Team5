@@ -40,8 +40,21 @@ namespace WorkHourTracker.Data.Repository
             p.Add("@p_AssignedProjectName", input.AssignedProjectName);
             p.Add("@p_CreateUser", input.CreateUser);
 
+            var validUserNameAndProject = new DynamicParameters();
+            p.Add("@p_UserName", input.AssignedUserName);
+            p.Add("@p_ProjectName", input.AssignedProjectName);
+
             using (IDbConnection connection = new SqlConnection(_connectionString))
             {
+                bool isValid = false;
+
+                isValid = await connection.QueryFirstAsync<bool>("sp_IsAssignAProjectInputValid", p, commandType: CommandType.StoredProcedure);
+
+                if (!isValid)
+                {
+
+                }
+
                 await connection.ExecuteAsync("sp_AssignProjectToEmployee", p, commandType: CommandType.StoredProcedure);
             }
         }
