@@ -114,6 +114,7 @@ namespace WorkHourTracker.Web.Controllers
             // Since ViewModel input is valid, transform it into the DTO to transfer to other layers
             var databaseInput = new AssignProjectToEmployeeDatabaseInput(input.AssignedProjectName,
                                                                          input.AssignedUserName,
+                                                                         input.Capacity,
                                                                          TempData.Peek("userName").ToString());
 
             try

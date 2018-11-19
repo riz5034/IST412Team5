@@ -15,5 +15,10 @@ namespace WorkHourTracker.Web.Models
         [Required]
         [MaxLength(50)]
         public string AssignedProjectName { get; set; }
+
+        [Required]
+        [Range(0,8)]
+        public int Capacity { get; set; }
+
     }
 }

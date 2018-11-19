@@ -38,11 +38,13 @@ namespace WorkHourTracker.Data.Repository
             var p = new DynamicParameters();
             p.Add("@p_AssignedEmployeeUserName", input.AssignedUserName);
             p.Add("@p_AssignedProjectName", input.AssignedProjectName);
+            p.Add("@p_Capacity", input.Capacity);
             p.Add("@p_CreateUser", input.CreateUser);
 
             var validUserNameAndProject = new DynamicParameters();
             validUserNameAndProject.Add("@p_UserName", input.AssignedUserName);
             validUserNameAndProject.Add("@p_ProjectName", input.AssignedProjectName);
+
 
             using (IDbConnection connection = new SqlConnection(_connectionString))
             {
