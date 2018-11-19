@@ -137,5 +137,11 @@ namespace WorkHourTracker.Web.Controllers
 
             return RedirectTo("ProjectManager", "AssignProject");
         }
+
+        public IActionResult EmployeeSearch()
+        {
+            return View();
+        }
+
     }
 }

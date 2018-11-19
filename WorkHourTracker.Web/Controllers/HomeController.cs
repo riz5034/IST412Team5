@@ -151,7 +151,8 @@ namespace WorkHourTracker.Web.Controllers
 
                 return RedirectTo("Home", "DisplayCreateUserAccountPage");
             }
-            catch (Exception)
+            catch (Exception ex)
+            
             {
                 resultList.Errors.Add($"An unexpected error has occured.");
                 TempData.Add("ModelErrors", resultList.Errors);
