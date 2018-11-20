@@ -138,5 +138,34 @@ namespace WorkHourTracker.Web.Controllers
 
             return RedirectTo("ProjectManager", "AssignProject");
         }
+
+        public IActionResult EmployeeSearch()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> GetEmployeeSearch(EmployeeSearchInput input)
+        {
+            //return the model state if the request is invalid
+            if (!ModelState.IsValid) { return BadRequest(ModelState); }
+
+            //define the output outside of the try catch block 
+            EmployeeSearchOutput employeeSearchResult;
+
+            try
+            {
+                //this is just a stub for now
+                employeeSearchResult = await _IProjectManagerDomain.GetEmployeeSearch(input);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            //return the View and pass in the Model
+            return View(employeeSearchResult);
+        }
     }
 }

@@ -60,5 +60,26 @@ namespace WorkHourTracker.Data.Repository
                 await connection.ExecuteAsync("sp_AssignProjectToEmployee", p, commandType: CommandType.StoredProcedure);
             }
         }
+
+        public async Task<EmployeeSearchOutput> GetEmployeeSearch(EmployeeSearchDatabaseInput input)
+        {
+            //create the DyanmicParamter object to hold our input for the sproc
+            var p = new DynamicParameters();
+
+            //Add the sproc input params to p
+            p.Add("@p_UserName", input.SearchedEmployeeUserName);
+
+            //define your result outside of the using block
+            EmployeeSearchOutput result;
+
+            using (IDbConnection connection = new SqlConnection(_connectionString))
+            {
+                //using Dapper execute the "sp_EmployeeSearch" sproc
+                result = await connection.QueryFirstAsync<EmployeeSearchOutput>("sp_EmployeeSearch", p, commandType: CommandType.StoredProcedure);
+            }
+
+            //return the sproc result
+            return result;
+        }
     }
 }

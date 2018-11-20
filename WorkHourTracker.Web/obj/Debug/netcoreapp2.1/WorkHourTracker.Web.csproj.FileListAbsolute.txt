@@ -42,3 +42,6 @@ C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.csproj.CopyComplete
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.dll
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\WorkHourTracker.Web.pdb
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\TrackTime\DisplayTrackTimeDateRange.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\TrackTime\DisplayTrackTimeDetails.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\ProjectManager\EmployeeSearch.g.cshtml.cs

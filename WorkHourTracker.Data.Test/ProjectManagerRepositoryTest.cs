@@ -25,5 +25,18 @@ namespace WorkHourTracker.Data.Test
             await _projectManagerRepository.CreateNewProject(input);
             //Assert
         }
+
+        [Fact]
+        public async Task GetEmployeeSearch()
+        {
+            //Arrange
+            var input = new EmployeeSearchDatabaseInput() { SearchedEmployeeUserName = "DSchrute" };
+
+            //Act
+            var result = await _projectManagerRepository.GetEmployeeSearch(input);
+
+            //Assert
+            Assert.NotNull(result);
+        }
     }
 }
