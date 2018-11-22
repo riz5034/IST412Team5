@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "DisplayProjectSearch";
+}
+@model WorkHourTracker.Model.Entities.ProjectSearchDatabaseOutput
+
+<h2>Project Details</h2>
+
+<div class="container">
+    <h3>About: @Model.ProjectName</h3>
+
+    <div>
+        <table class="table-striped">
+            <tbody>
+                <tr>
+                    <td class="col-sm-3"><b>Project Name:</b></td>
+                    <td class="col-sm-3">@Model.ProjectName</td>
+                </tr>
+                <tr>
+                    <td class="col-sm-3"><b>Project Code Name:</b></td>
+                    <td class="col-sm-3">@Model.ProjectCodeName</td>
+                </tr>
+                <tr>
+                    <td class="col-sm-3"><b>Assigned Individuals:</b></td>
+                    <td class="col-sm-3">@Model.CsvIndividualsOnProject</td>
+                </tr>
+                <tr>
+                    <td class="col-sm-3"><b>Total Hours Spent:</b></td>
+                    <td class="col-sm-3">@Model.GrandTotalHoursWorkedOnProject</td>
+                </tr>
+                <tr>
+                    <td class="col-sm-3"><b>Create User:</b></td>
+                    <td class="col-sm-3">@Model.CreateUser</td>
+                </tr>
+                <tr>
+                    <td class="col-sm-3"><b>Create Date</b></td>
+                    <td class="col-sm-3">@Model.ShortDate</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

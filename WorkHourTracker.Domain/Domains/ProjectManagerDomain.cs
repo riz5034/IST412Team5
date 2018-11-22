@@ -28,5 +28,14 @@ namespace WorkHourTracker.Domain.Domains
             await _IProjectManagerRepository.AssignProject(input);
         }
 
+       public async Task<EmployeeSearchOutput> GetEmployeeSearch(EmployeeSearchDatabaseInput input)
+        {
+            return await _IProjectManagerRepository.GetEmployeeSearch(input);
+        }
+
+        public async Task<ProjectSearchDatabaseOutput> ProjectSearch(ProjectSearchDatabaseInput input)
+        {
+            return await _IProjectManagerRepository.ProjectSearch(input);
+        }
     }
 }

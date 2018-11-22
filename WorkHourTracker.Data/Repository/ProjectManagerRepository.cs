@@ -81,5 +81,19 @@ namespace WorkHourTracker.Data.Repository
             //return the sproc result
             return result;
         }
+
+        public async Task<ProjectSearchDatabaseOutput> ProjectSearch(ProjectSearchDatabaseInput input)
+        {
+            var p = new DynamicParameters();
+            p.Add("@p_SearchedProject", input.SearchedProject );
+
+            ProjectSearchDatabaseOutput output;
+            using (IDbConnection connection = new SqlConnection(_connectionString))
+            {
+                output = await connection.QueryFirstAsync<ProjectSearchDatabaseOutput>("sp_ProjectSearch", p, commandType: CommandType.StoredProcedure);
+            }
+
+            return output;
+        }
     }
 }

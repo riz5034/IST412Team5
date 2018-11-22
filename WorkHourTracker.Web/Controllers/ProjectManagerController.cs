@@ -150,22 +150,60 @@ namespace WorkHourTracker.Web.Controllers
             //return the model state if the request is invalid
             if (!ModelState.IsValid) { return BadRequest(ModelState); }
 
+            var databaseInput = new EmployeeSearchDatabaseInput() { SearchedEmployeeUserName = input.SearchedEmployee };
+
             //define the output outside of the try catch block 
             EmployeeSearchOutput employeeSearchResult;
 
             try
             {
                 //this is just a stub for now
-                employeeSearchResult = await _IProjectManagerDomain.GetEmployeeSearch(input);
+                employeeSearchResult = await _IProjectManagerDomain.GetEmployeeSearch(databaseInput);
+                employeeSearchResult.ChartData = employeeSearchResult.getCapacityForChart();
+
+                if (employeeSearchResult.IsOverCapacity)
+                {
+                    TempData.Add("IsOverCapacity", "Warning: Thie employee is over capacity.");
+                }
             }
             catch (Exception)
             {
-
-                throw;
+                TempData.Add("NoEmployeeFound", $"The User Name you entered, {input.SearchedEmployee}, was either incorrect, does not exist in the system, or has no associated data in the system. Please verify the User Name is correct and and try again.");
+                return RedirectTo("ProjectManager", "EmployeeSearch");
             }
 
             //return the View and pass in the Model
             return View(employeeSearchResult);
         }
+
+        public IActionResult ProjectSearch()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Bring back Project Level information by the search project
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public async Task<IActionResult> DisplayProjectSearch(ProjectSearchInput input)
+        {
+            ProjectSearchDatabaseOutput result;
+
+            var databaseInput = new ProjectSearchDatabaseInput { SearchedProject = input.SearchedProject };
+
+            try
+            {
+                result = await _IProjectManagerDomain.ProjectSearch(databaseInput);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+            return View(result);
+        }
+
     }
 }

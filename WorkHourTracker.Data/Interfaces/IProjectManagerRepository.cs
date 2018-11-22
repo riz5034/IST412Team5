@@ -11,5 +11,6 @@ namespace WorkHourTracker.Data.Interfaces
         Task CreateNewProject(CreateProjectDatabaseInput input);
         Task AssignProject(AssignProjectToEmployeeDatabaseInput input);
         Task<EmployeeSearchOutput> GetEmployeeSearch(EmployeeSearchDatabaseInput input);
+        Task<ProjectSearchDatabaseOutput> ProjectSearch(ProjectSearchDatabaseInput input);
     }
 }

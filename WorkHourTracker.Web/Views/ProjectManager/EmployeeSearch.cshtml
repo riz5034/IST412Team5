@@ -6,6 +6,13 @@
 
 <h2>Employee Search</h2>
 
+<div>
+    @if (TempData.Peek("NoEmployeeFound") != null)
+    {
+        <p style="color: red">@TempData["NoEmployeeFound"].ToString()</p>
+    }
+</div>
+
 <p>Enter the UserName of the Employee you wish to view information on</p>
 
 <form asp-controller="ProjectManager" asp-action="GetEmployeeSearch">

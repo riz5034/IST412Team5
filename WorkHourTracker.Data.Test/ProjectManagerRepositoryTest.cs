@@ -38,5 +38,33 @@ namespace WorkHourTracker.Data.Test
             //Assert
             Assert.NotNull(result);
         }
+
+        [Fact]
+        public async Task ProjectSearch_ByProjectName()
+        {
+            //Arrange
+            var input = new ProjectSearchDatabaseInput { SearchedProject = "ProjectPaper" };
+
+            //Act
+            var result = await _projectManagerRepository.ProjectSearch(input);
+
+            //Assert
+            Assert.NotNull(result);
+            Assert.Equal("11/8/2018", result.ShortDate);
+        }
+
+        [Fact]
+        public async Task ProjectSearch_ByProjectCodeName()
+        {
+            //Arrange
+            var input = new ProjectSearchDatabaseInput { SearchedProject = "Paper" };
+
+            //Act
+            var result = await _projectManagerRepository.ProjectSearch(input);
+
+            //Assert
+            Assert.NotNull(result);
+            Assert.Equal("11/8/2018", result.ShortDate);
+        }
     }
 }
