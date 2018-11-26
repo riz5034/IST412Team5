@@ -160,6 +160,7 @@ namespace WorkHourTracker.Web.Controllers
                 return RedirectTo("Home", "DisplayCreateUserAccountPage");
             }
 
+            TempData.Add("CreateUserAccountSuccess", $"User account for {input.UserName} was successfully created. You may log into the system now.");
             return RedirectTo("Home", "UserLogin");
         }
 

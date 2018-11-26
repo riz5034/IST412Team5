@@ -9,5 +9,6 @@ namespace WorkHourTracker.Web.Models
     public class TrackTimeList
     {
         public List<GetTrackTimeDatabaseOutput> UserTrackTimeList { get; set; }
+        public bool IsCurrentRecord { get; set; }
     }
 }

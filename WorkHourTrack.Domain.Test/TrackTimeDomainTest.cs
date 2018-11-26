@@ -46,5 +46,19 @@ namespace WorkHourTracker.Domain.Test
             //Assert
             Assert.Equal(expectedDate, lastOfWeek);
         }
+
+        [Fact]
+        public void IsCurrentRecord_False()
+        {
+            //Arrange
+            string startDate = "11/11/2018";
+            string endDate = "11/17/2018";
+
+            //Act
+            var boolResult = _trackTimeDomain.IsCurrentRecord(startDate, endDate);
+
+            //Assert
+            Assert.False(boolResult);
+        }
     }
 }

@@ -37,6 +37,13 @@
                         }
                     }
                 </div>
+
+                <div>
+                    @if (TempData.Peek("CreateUserAccountSuccess") != null)
+                    {
+                        <p style="color: green">@TempData["CreateUserAccountSuccess"].ToString()</p>
+                    }
+                </div>
             </div>
             <form asp-action="ProcessLogin" asp-controller="Home">
                 <div>

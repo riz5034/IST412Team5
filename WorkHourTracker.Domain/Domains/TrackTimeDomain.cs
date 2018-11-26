@@ -90,5 +90,30 @@ namespace WorkHourTracker.Domain.Domains
         {
             return await _ITrackTimeRepo.IsTrackTimeRecordCreatedForProject(input);
         }
+
+        /// <summary>
+        /// This method will check to see if the record the use is clicking on is from
+        /// a previous week or if it is the current week's record
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <returns></returns>
+        public bool IsCurrentRecord(string startDate, string endDate)
+        {
+            bool isCurrentRecord = false;
+
+            //get today's date
+            var today = DateTime.Now;
+
+            //Convert startDate and endDate back to DateTime
+            var start = Convert.ToDateTime(startDate);
+            var end = Convert.ToDateTime(endDate);
+
+            //is today's date within the supplied week's range?
+            isCurrentRecord = (today >= start) && (today <= end);
+
+            return isCurrentRecord;
+
+        }
     }
 }

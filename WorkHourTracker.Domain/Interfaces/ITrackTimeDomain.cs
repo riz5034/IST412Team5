@@ -16,5 +16,6 @@ namespace WorkHourTracker.Domain.Interfaces
         DateTime LastDayOfWeek(DateTime currentDate);
         DateTime FirstDayOfWeek(DateTime currentDate);
         Task<bool> IsTrackTimeRecordCreatedForProject(CreateNewTrackTimeRecordDatabaseInput input);
+        bool IsCurrentRecord(string startDate, string endDate);
     }
 }

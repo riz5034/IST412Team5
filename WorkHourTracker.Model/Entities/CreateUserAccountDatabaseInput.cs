@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using WorkHourTracker.Model.Constants;
 namespace WorkHourTracker.Model.Entities
 {
     /// <summary>
@@ -23,7 +23,11 @@ namespace WorkHourTracker.Model.Entities
             UserGuid = Guid.NewGuid().ToString();
             UserName = userName;
             UserPassword = userPassword;
-            UserRole = userRole;
+
+            //convert the enum to the string representation
+            Enums.RoleType role;
+            Enum.TryParse(userRole, out role);
+            UserRole = role.ToString();
 
             EmployeeGuid = Guid.NewGuid().ToString();
             FirstName = firstName;

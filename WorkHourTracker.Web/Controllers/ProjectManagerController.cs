@@ -195,6 +195,7 @@ namespace WorkHourTracker.Web.Controllers
             try
             {
                 result = await _IProjectManagerDomain.ProjectSearch(databaseInput);
+                result.ChartData = result.GetIndividualHoursForChart();
             }
             catch (Exception ex)
             {

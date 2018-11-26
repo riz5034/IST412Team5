@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-
+using WorkHourTracker.Model.Constants;
 namespace WorkHourTracker.Web.Models
 {
     public class CreateUserAccountInput
@@ -16,9 +16,9 @@ namespace WorkHourTracker.Web.Models
         [MinLength(5)]
         public string UserPassword { get; set; }
 
-        //Maybe supply a drop down to select their role?
+        
         [Required]
-        [MinLength(5)]
+        [EnumDataType(typeof(Enums.RoleType))]
         public string UserRole { get; set; }
 
         [Required]

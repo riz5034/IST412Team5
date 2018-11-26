@@ -125,6 +125,14 @@ namespace WorkHourTracker.Web.Controllers
 
             //Set the UserTrackTimeList property of the ViewModel
             TrackTimeList trackTimeDetailsList = new TrackTimeList { UserTrackTimeList = trackTimeDetails };
+            trackTimeDetailsList.IsCurrentRecord = true;
+            if (!_ITrackTimeDomain.IsCurrentRecord(startDate, endDate))
+            {
+                TempData.Add("ReadonlyTrackTime", "This is record is for a previous week's Track Time.");
+                trackTimeDetailsList.IsCurrentRecord = false;
+                //return RedirectTo("TrackTime", "DisplayReadonlyTrackTime");
+            }
+
 
             //return the View and pass in the user's track time details list
             return View(trackTimeDetailsList);
@@ -167,6 +175,21 @@ namespace WorkHourTracker.Web.Controllers
             TempData.Add("SaveTrackTime", workHourTrackerList.Errors);
 
             return RedirectToAction("DisplayTrackTimeDetails", "TrackTime", new { startDate = startOfWeek, endDate = lastOfWeek });
+        }
+
+        public IActionResult DisplayReadonlyTrackTime()
+        {
+            GetTrackTimeDatabaseOutput[] array = (GetTrackTimeDatabaseOutput[])TempData["ReadonlyTrackTime"];
+
+            TrackTimeList trackTimeList = new TrackTimeList();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                trackTimeList.UserTrackTimeList.Add(array[i]);
+            }
+
+
+            return View(trackTimeList);
         }
 
         /// <summary>

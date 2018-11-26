@@ -48,3 +48,4 @@ C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\ProjectManager\GetEmployeeSearch.g.cshtml.cs
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\ProjectManager\ProjectSearch.g.cshtml.cs
 C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\ProjectManager\DisplayProjectSearch.g.cshtml.cs
+C:\Users\dds51\Desktop\SchoolWork\IST 412\WorkHourTrackerGitRepo\WorkHourTracker.Web\obj\Debug\netcoreapp2.1\Razor\Views\TrackTime\DisplayReadonlyTrackTime.g.cshtml.cs
