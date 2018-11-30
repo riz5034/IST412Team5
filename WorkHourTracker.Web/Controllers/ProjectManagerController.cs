@@ -9,6 +9,7 @@ using WorkHourTracker.Model.Entities;
 using WorkHourTracker.Model.Exceptions;
 using WorkHourTracker.Domain.Interfaces;
 using WorkHourTracker.Domain.Domains;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WorkHourTracker.Web.Controllers
 {
@@ -23,6 +24,15 @@ namespace WorkHourTracker.Web.Controllers
 
         public IActionResult Index()
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: false);
+            }
+
+            if (TempData.Peek("userRole").ToString() == "Employee")
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: true);
+            }
             return View();
         }
 
@@ -33,6 +43,15 @@ namespace WorkHourTracker.Web.Controllers
         /// <returns></returns>
         public IActionResult CreateProject()
         {
+            if (TempData.Peek("userName") == null) 
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: false);
+            }
+
+            if (TempData.Peek("userRole").ToString() == "Employee")
+            {
+               return UserNotAllowedAccess(isUserLoggedIn: true);
+            }
             return View();
         }
 
@@ -40,6 +59,16 @@ namespace WorkHourTracker.Web.Controllers
         [ValidateAntiForgeryToken] //this is here to prevent XSS (cross site scripting attacks)
         public async Task<IActionResult> SaveNewProject(CreateProjectInput newProjectInput)
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: false);
+            }
+
+            if (TempData.Peek("userRole").ToString() == "Employee")
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: true);
+            }
+
             if (!ModelState.IsValid) { return BadRequest(ModelState); }
 
             var resultList = new WorkHourTrackerListResult() { Errors = new List<string>(), WorkHourTrackList = new List<dynamic>() };
@@ -78,6 +107,15 @@ namespace WorkHourTracker.Web.Controllers
         /// <returns></returns>
         public IActionResult AssignProject()
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: false);
+            }
+
+            if (TempData.Peek("userRole").ToString() == "Employee")
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: true);
+            }
             return View();
         }
 
@@ -104,9 +142,19 @@ namespace WorkHourTracker.Web.Controllers
         /// <returns></returns>
         public async Task<IActionResult> SaveProjectAssignment(WorkHourTracker.Web.Models.AssignProjectInput input)
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: false);
+            }
+
+            if (TempData.Peek("userRole").ToString() == "Employee")
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: true);
+            }
+
             // Check to see if ViewModel is valid
             // This will end the process and return the ModelState telling the user what went wrong
-            if(!ModelState.IsValid) { return BadRequest(ModelState); }
+            if (!ModelState.IsValid) { return BadRequest(ModelState); }
 
             // Create a WorkHourTrackerListResult object and initializes its properties
             var resultList = new WorkHourTrackerListResult() { Errors = new List<string>(), WorkHourTrackList = new List<dynamic>() };
@@ -141,12 +189,32 @@ namespace WorkHourTracker.Web.Controllers
 
         public IActionResult EmployeeSearch()
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: false);
+            }
+
+            if (TempData.Peek("userRole").ToString() == "Employee")
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: true);
+            }
+
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> GetEmployeeSearch(EmployeeSearchInput input)
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: false);
+            }
+
+            if (TempData.Peek("userRole").ToString() == "Employee")
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: true);
+            }
+
             //return the model state if the request is invalid
             if (!ModelState.IsValid) { return BadRequest(ModelState); }
 
@@ -175,9 +243,19 @@ namespace WorkHourTracker.Web.Controllers
             //return the View and pass in the Model
             return View(employeeSearchResult);
         }
-
+       
         public IActionResult ProjectSearch()
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: false);
+            }
+
+            if (TempData.Peek("userRole").ToString() == "Employee")
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: true);
+            }
+
             return View();
         }
 
@@ -188,6 +266,16 @@ namespace WorkHourTracker.Web.Controllers
         /// <returns></returns>
         public async Task<IActionResult> DisplayProjectSearch(ProjectSearchInput input)
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: false);
+            }
+
+            if (TempData.Peek("userRole").ToString() == "Employee")
+            {
+                return UserNotAllowedAccess(isUserLoggedIn: true);
+            }
+
             ProjectSearchDatabaseOutput result;
 
             var databaseInput = new ProjectSearchDatabaseInput { SearchedProject = input.SearchedProject };
@@ -204,6 +292,24 @@ namespace WorkHourTracker.Web.Controllers
             }
 
             return View(result);
+        }
+
+        /// <summary>
+        /// This method is used to route the user back to their current View
+        /// if they are not logged in or not allowed access to a method
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult UserNotAllowedAccess(bool isUserLoggedIn)
+        {
+            if (!isUserLoggedIn)
+            {
+              TempData.Add("UserNotLoggedIn", "Please log into the application.");
+              return RedirectTo("Home", "UserLogin");
+            }
+
+            TempData.Add("AccessDenied", "Sorry, you do not have access to that page.");
+            return RedirectTo("Home", "Index");
+               
         }
 
     }

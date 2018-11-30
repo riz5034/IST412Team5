@@ -11,6 +11,7 @@ using WorkHourTracker.Model.Exceptions;
 using WorkHourTracker.Domain.Domains;
 using WorkHourTracker.Domain.Interfaces;
 using System.Text;
+using Microsoft.AspNetCore.Http.Extensions;
 
 namespace WorkHourTracker.Web.Controllers
 {

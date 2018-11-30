@@ -23,6 +23,11 @@ namespace WorkHourTracker.Web.Controllers
 
         public async Task<IActionResult> DisplayTrackTimeDateRange()
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess();
+            }
+
             //get the input object set up
             var dateRangeInput = new GetTrackTimeDateRangeDatabaseInput(TempData.Peek("userGuid").ToString());
 
@@ -47,6 +52,11 @@ namespace WorkHourTracker.Web.Controllers
         /// <returns></returns>
         public async Task<IActionResult> CreateNewTrackTimeRecord()
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess();
+            }
+
             string startOfWeek;
             string lastOfWeek;
 
@@ -118,6 +128,11 @@ namespace WorkHourTracker.Web.Controllers
 
         public async Task<IActionResult> DisplayTrackTimeDetails(string startDate, string endDate)
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess();
+            }
+
             //get the track time details for the newly created records
             var getTrackTimeInput = new GetTrackTimeDatabaseInput(TempData.Peek("userGuid").ToString(), startDate, endDate);
 
@@ -145,6 +160,11 @@ namespace WorkHourTracker.Web.Controllers
         /// <returns></returns>
         public async Task<IActionResult> SaveTrackTime(TrackTimeList input)
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess();
+            }
+
             var workHourTrackerList = new WorkHourTrackerListResult() { Errors = new List<string>(), WorkHourTrackList = new List<dynamic>() };
 
             //get the start and end dates so we can display the track time details page when this operation is done
@@ -179,6 +199,11 @@ namespace WorkHourTracker.Web.Controllers
 
         public IActionResult DisplayReadonlyTrackTime()
         {
+            if (TempData.Peek("userName") == null)
+            {
+                return UserNotAllowedAccess();
+            }
+
             GetTrackTimeDatabaseOutput[] array = (GetTrackTimeDatabaseOutput[])TempData["ReadonlyTrackTime"];
 
             TrackTimeList trackTimeList = new TrackTimeList();
@@ -206,6 +231,18 @@ namespace WorkHourTracker.Web.Controllers
                 action = actionMethodName
             });
         }
+
+        /// <summary>
+        /// This method is used to route the user back to their current View
+        /// if they are not logged in or not allowed access to a method
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult UserNotAllowedAccess()
+        {
+            TempData.Add("UserNotLoggedIn", "Please log into the application.");
+            return RedirectTo("Home", "UserLogin");
+        }
+
 
     }
 }

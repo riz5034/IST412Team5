@@ -6,15 +6,7 @@
 
 <p>Welcome to the Work Hour Tracker, <b>@TempData.Peek("firstName").ToString()</b></p>
 
-
-@*<div>
-    @{
-        @foreach (var employeeHistory in ViewBag.SearchedList)
-        {
-          <p>Employee: @employeeHistory.EmployeeName</p>
-          <p>Project: @employeeHistory.Project</p>
-          <p>Hours Worked: @employeeHistory.TimeLogged</p>
-        }
-
-    }
-</div>*@
+@if (TempData.Peek("AccessDenied") != null)
+{
+    <p style="color: red">@TempData["AccessDenied"]</p>
+}

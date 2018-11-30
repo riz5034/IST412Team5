@@ -38,13 +38,13 @@
 <form asp-action="SaveProjectAssignment" asp-controller="ProjectManager">
     <span>
         Assign:
-        <label asp-for="AssignedProjectName"></label>
+        @*<label asp-for="AssignedProjectName"></label>*@
         <input asp-for="AssignedProjectName" type="text" placeholder="MyProject" />
         To:
-        <label asp-for="AssignedUserName"></label>
+        @*<label asp-for="AssignedUserName"></label>*@
         <input asp-for="AssignedUserName" type="text" placeholder="Employee's UserName" />
-        Hours:
-        <label asp-for="Capacity"></label>
+        At Hours per Day:
+        @*<label asp-for="Capacity"></label>*@
         <input asp-for="Capacity" type="text" placeholder="Employee's Hours" />
         <button type="submit" class="btn-success">Assign</button>
     </span>

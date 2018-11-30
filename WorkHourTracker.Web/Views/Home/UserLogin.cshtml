@@ -44,6 +44,13 @@
                         <p style="color: green">@TempData["CreateUserAccountSuccess"].ToString()</p>
                     }
                 </div>
+
+                <div>
+                    @if (TempData.Peek("UserNotLoggedIn") != null)
+                    {
+                        <p style="color: red">@TempData["UserNotLoggedIn"].ToString()</p>
+                    }
+                </div>
             </div>
             <form asp-action="ProcessLogin" asp-controller="Home">
                 <div>
