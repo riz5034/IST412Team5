@@ -25,6 +25,15 @@
                 }
             }
         </div>
+        <div>
+            @if (TempData.Peek("CreateProjectInvalid") != null)
+            {
+                foreach (var message in (string[])TempData["CreateProjectInvalid"])
+                {
+                    <p style="color:red">@message</p>
+                }
+            }
+        </div>
         <form asp-action="SaveNewProject" asp-controller="ProjectManager">
             <div>
                 <label asp-for="ProjectName"></label>

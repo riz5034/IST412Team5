@@ -68,8 +68,14 @@ namespace WorkHourTracker.Web.Controllers
             {
                 return UserNotAllowedAccess(isUserLoggedIn: true);
             }
-
-            if (!ModelState.IsValid) { return BadRequest(ModelState); }
+            //if the ModelState is invalid return the user to the CreateProject page and show them the validation errors
+            if (!ModelState.IsValid)
+            {
+                List<string> errors = ModelState.Values.SelectMany(p => p.Errors.Select(x => x.ErrorMessage)).ToList();
+                TempData.Add("CreateProjectInvalid", errors);
+                return RedirectTo("ProjectManager", "CreateProject");
+            }
+          
 
             var resultList = new WorkHourTrackerListResult() { Errors = new List<string>(), WorkHourTrackList = new List<dynamic>() };
 
@@ -152,9 +158,13 @@ namespace WorkHourTracker.Web.Controllers
                 return UserNotAllowedAccess(isUserLoggedIn: true);
             }
 
-            // Check to see if ViewModel is valid
-            // This will end the process and return the ModelState telling the user what went wrong
-            if (!ModelState.IsValid) { return BadRequest(ModelState); }
+            //if the ModelState is invalid return the user to the AssignProject page and show them the validation errors
+            if (!ModelState.IsValid)
+            {
+                List<string> errors = ModelState.Values.SelectMany(p => p.Errors.Select(x => x.ErrorMessage)).ToList();
+                TempData.Add("AssignProjectInvalid", errors);
+                return RedirectTo("ProjectManager", "AssignProject");
+            }
 
             // Create a WorkHourTrackerListResult object and initializes its properties
             var resultList = new WorkHourTrackerListResult() { Errors = new List<string>(), WorkHourTrackList = new List<dynamic>() };
@@ -216,7 +226,12 @@ namespace WorkHourTracker.Web.Controllers
             }
 
             //return the model state if the request is invalid
-            if (!ModelState.IsValid) { return BadRequest(ModelState); }
+            if (!ModelState.IsValid)
+            {
+                List<string> errors = ModelState.Values.SelectMany(p => p.Errors.Select(x => x.ErrorMessage)).ToList();
+                TempData.Add("EmployeeSearchInvalid", errors);
+                return RedirectTo("ProjectManager", "EmployeeSearch");
+            }
 
             var databaseInput = new EmployeeSearchDatabaseInput() { SearchedEmployeeUserName = input.SearchedEmployee };
 
@@ -287,8 +302,8 @@ namespace WorkHourTracker.Web.Controllers
             }
             catch (Exception ex)
             {
-
-                throw;
+                TempData.Add("ProjectSearchError", $"The project you searched for, {input.SearchedProject}, return no results. Please verify you have entered the correct Project Name or Project Code Name and try again.");
+                return RedirectTo("ProjectManager", "ProjectSearch");
             }
 
             return View(result);

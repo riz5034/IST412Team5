@@ -33,6 +33,15 @@
         }
     }
 </div>
+<div>
+    @if (TempData.Peek("AssignProjectInvalid") != null)
+    {
+        foreach (var message in (string[])TempData["AssignProjectInvalid"])
+        {
+            <p style="color: red">@message</p>
+        }
+    }
+</div>
 
 @*Link the ViewModel for AssignProject*@
 <form asp-action="SaveProjectAssignment" asp-controller="ProjectManager">
@@ -45,7 +54,7 @@
         <input asp-for="AssignedUserName" type="text" placeholder="Employee's UserName" />
         At Hours per Day:
         @*<label asp-for="Capacity"></label>*@
-        <input asp-for="Capacity" type="text" placeholder="Employee's Hours" />
+        <input asp-for="Capacity" type="number" placeholder="Employee's Hours" />
         <button type="submit" class="btn-success">Assign</button>
     </span>
 </form>

@@ -170,6 +170,15 @@ namespace WorkHourTracker.Web.Controllers
             //get the start and end dates so we can display the track time details page when this operation is done
             string startOfWeek = input.UserTrackTimeList[0].StartDate;
             string lastOfWeek = input.UserTrackTimeList[0].EndDate;
+
+            //if the ModelState is invalid return the user to the CreateProject page and show them the validation errors
+            if (!ModelState.IsValid)
+            {
+                List<string> errors = ModelState.Values.SelectMany(p => p.Errors.Select(x => x.ErrorMessage)).ToList();
+                TempData.Add("SaveTrackTimeError", errors);
+                return RedirectToAction("DisplayTrackTimeDetails", "TrackTime", new { startDate = startOfWeek, endDate = lastOfWeek });
+            }
+
             try
             {
                 //foreach record in the input list, save the new track time data

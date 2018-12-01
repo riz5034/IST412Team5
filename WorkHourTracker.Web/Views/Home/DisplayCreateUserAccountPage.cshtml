@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
     ViewData["Title"] = "CreateUserAccount";
 }
@@ -11,7 +10,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Work Hour Tracker - UserLogin</title>
+    <title>Work Hour Tracker - Sign Up</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -25,67 +24,66 @@
     </environment>
 </head>
 <body>
-    <h2>CreateUserAccount</h2>
 
-    <div class="container">
-        <form asp-action="CreateUserAccount" asp-controller="Home">
-            <div>
-                @if (TempData.Peek("ModelErrors") != null)
-                {
-                    foreach (var errorMessage in (string[])@TempData["ModelErrors"])
-                    {
-                        <p style="color:red">@errorMessage</p>
-                    }
-                }
-            </div>
-            <div>
-                <label asp-for="FirstName"></label>
-                <div>
-                    <input asp-for="FirstName" type="text" placeholder="FirstName" />
-                </div>
-            </div>
+    <div class="col-sm-12">
+        <div class="col-sm-3"><br /></div>
+        <div class="col-sm-6">
+            <div class="signUpContainer">
+                <form asp-action="CreateUserAccount" asp-controller="Home">
+                    <div>
+                        @if (TempData.Peek("ModelErrors") != null)
+                        {
+                            foreach (var errorMessage in (string[])@TempData["ModelErrors"])
+                            {
+                                <p style="color:red">@errorMessage</p>
+                            }
+                        }
+                    </div>
+                    <div>
+                        <h2>Work Hour Tracker Sign Up</h2>
+                        <label asp-for="FirstName"></label>
+                        <div>
+                            <input class="signUpInput" asp-for="FirstName" type="text" placeholder="FirstName" />
+                        </div>
+                    </div>
 
-            <div>
-                <label asp-for="LastName"></label>
-                <div>
-                    <input asp-for="LastName" type="text" placeholder="LastName" />
-                </div>
-            </div>
+                    <div>
+                        <label asp-for="LastName"></label>
+                        <div>
+                            <input class="signUpInput" asp-for="LastName" type="text" placeholder="LastName" />
+                        </div>
+                    </div>
 
-            <div>
-                <label asp-for="UserName"></label>
-                <div>
-                    <input asp-for="UserName" type="text" placeholder="UserName" />
-                </div>
-            </div>
+                    <div>
+                        <label asp-for="UserName"></label>
+                        <div>
+                            <input class="signUpInput" asp-for="UserName" type="text" placeholder="UserName" />
+                        </div>
+                    </div>
 
-            <div>
-                <label asp-for="UserPassword"></label>
-                <div>
-                    <input asp-for="UserPassword" type="password" placeholder="Password" />
-                </div>
-            </div>
+                    <div>
+                        <label asp-for="UserPassword"></label>
+                        <div>
+                            <input class="signUpInput" asp-for="UserPassword" type="password" placeholder="Password" />
+                        </div>
+                    </div>
 
-            <div>
-                <label asp-for="UserRole"></label>
-                <div>
-                   <select asp-for="UserRole" asp-items="Html.GetEnumSelectList<WorkHourTracker.Model.Constants.Enums.RoleType>()">
-                       <option value="">Select a Role</option>
-                   </select>
-                </div>
-            </div>
+                    <div>
+                        <label asp-for="UserRole"></label>
+                        <div>
+                            <input class="signUpInput" asp-for="UserRole" type="text" placeholder="UserRole" />
+                        </div>
+                    </div>
 
-            <br />
-            <div>
-                <input class="btn-sm btn-success" type="submit" />
+                    <br />
+                    <div>
+                        <input class="registerbtn" value="Sign up" type="submit" />
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
+        <div class="col-sm-3"><br /></div>
     </div>
+
 </body>
 </html>
-
-
-
-
-
-

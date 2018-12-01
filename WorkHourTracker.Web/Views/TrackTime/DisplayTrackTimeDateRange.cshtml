@@ -14,8 +14,10 @@
 </div>
 
 <div>
+    <p>Click the "Create New or Update Current TrackTime Record" link to either create a new record or update the current week's record if your Project Manager or Manager assigned you to a project after you created the current week's TrackTime record.</p>
+    <p>Click the date ranges below to view the current TrackTime record or past TrackTime records.</p>
     <div>
-        <a asp-controller="TrackTime" asp-action="CreateNewTrackTimeRecord">Create New TrackTime Record</a>
+        <a asp-controller="TrackTime" asp-action="CreateNewTrackTimeRecord">Create New or Update Current TrackTime Record</a>
     </div>
     <br />
     @foreach (var dateRange in Model)

@@ -9,12 +9,21 @@
 {
     <div >
         @if(TempData.Peek("SaveTrackTime") != null)
-  {
+     {
         foreach (var message in (string[])TempData["SaveTrackTime"])
         {
             <p style="color: green">@message</p>
         }
     }
+    </div>
+    <div>
+        @if (TempData.Peek("SaveTrackTimeError") != null)
+        {
+            foreach (var message in (string[])TempData["SaveTrackTimeError"])
+            {
+                <p style="color:red">@message</p>
+            }
+        }
     </div>
 
     @* Display the track time details per project *@

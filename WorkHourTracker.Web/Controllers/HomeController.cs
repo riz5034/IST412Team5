@@ -43,7 +43,13 @@ namespace WorkHourTracker.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ProcessLogin(UserLoginInput input)
         {
-            if (!ModelState.IsValid) { return BadRequest(ModelState); }
+            //if the ModelState is invalid return the user to the CreateProject page and show them the validation errors
+            if (!ModelState.IsValid)
+            {
+                List<string> errors = ModelState.Values.SelectMany(p => p.Errors.Select(x => x.ErrorMessage)).ToList();
+                TempData.Add("ProcessLoginError", errors);
+                return RedirectTo("Home", "UserLogin");
+            }
 
             var resultList = new WorkHourTrackerListResult() { Errors = new List<string>(), WorkHourTrackList = new List<dynamic>() };
 
