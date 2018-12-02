@@ -71,7 +71,9 @@
                     <div>
                         <label asp-for="UserRole"></label>
                         <div>
-                            <input class="signUpInput" asp-for="UserRole" type="text" placeholder="UserRole" />
+                            <select asp-for="UserRole" asp-items="Html.GetEnumSelectList<WorkHourTracker.Model.Constants.Enums.RoleType>()">
+                                   <option value="">Select a Role</option>
+                            </select>
                         </div>
                     </div>
 

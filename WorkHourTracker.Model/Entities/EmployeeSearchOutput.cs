@@ -43,10 +43,10 @@ namespace WorkHourTracker.Model.Entities
 
             IsOverCapacity = true;
 
-            if (totalCapacity < 10)
+            if (totalCapacity < 8)
             {
                 IsOverCapacity = false;
-                int freeTime = 10 - totalCapacity;
+                int freeTime = 8 - totalCapacity;
 
                 chartData.Add(new EmployeeCapacity { ProjectName = "Free", CapacityHours = freeTime });
             }

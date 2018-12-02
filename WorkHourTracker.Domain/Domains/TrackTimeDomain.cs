@@ -103,7 +103,9 @@ namespace WorkHourTracker.Domain.Domains
             bool isCurrentRecord = false;
 
             //get today's date
-            var today = DateTime.Now;
+            var todaysDate = DateTime.Now;
+            var shortDateToday = todaysDate.ToShortDateString();
+            var today = Convert.ToDateTime(shortDateToday);
 
             //Convert startDate and endDate back to DateTime
             var start = Convert.ToDateTime(startDate);
