@@ -89,7 +89,7 @@ namespace WorkHourTracker.Web.Controllers
             {
                 //send the request to the Domain layer
                 await _IProjectManagerDomain.CreateNewProject(databaseInput);
-                resultList.Errors.Add($"Project: {databaseInput.ProjectName}<br/>Project CodeName: {databaseInput.ProjectCodeName} has been created. Please assign the project to indivduals to being working on it.");
+                resultList.Errors.Add($"Project: {databaseInput.ProjectName} Project CodeName: {databaseInput.ProjectCodeName} has been created. Please assign the project to indivduals to being working on it.");
                 TempData.Add("CreateProjectSuccess", resultList.Errors);
             }
             catch (Exception)
