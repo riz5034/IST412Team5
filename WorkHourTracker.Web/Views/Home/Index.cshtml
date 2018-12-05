@@ -10,3 +10,15 @@
 {
     <p style="color: red">@TempData["AccessDenied"]</p>
 }
+<p>Functionality avaiable to you:</p>
+    <ul>
+        <li>Track Time against the project(s) you have been assigned</li>
+        @if (TempData.Peek("userRole") != null && TempData.Peek("userRole").ToString() != "Employee")
+        {
+            <li>Create a new Project</li>
+            <li>Assign a project to Employees and set their capacity on the project</li>
+            <li>View Employee Track Time and Capacity Information</li>
+            <li>View Project level information</li>
+        }
+    </ul>
+
