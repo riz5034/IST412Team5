@@ -28,39 +28,39 @@ namespace WorkHourTracker.Data.Test
             Assert.NotNull(result);
         }
 
-        [Fact]
-        public async Task CreateAccount_Success()
-        {
-            //Arrange
-            var input = new CreateUserAccountDatabaseInput("JSmith", "123", "Employee", "John", "Smith");
+        //[Fact]
+        //public async Task CreateAccount_Success()
+        //{
+        //    //Arrange
+        //    var input = new CreateUserAccountDatabaseInput("JSmith", "123", "Employee", "John", "Smith");
 
-            var userLoginInput = new UserLoginDatabaseInput() { UserName = "JSmith", Password = "123" };
+        //    var userLoginInput = new UserLoginDatabaseInput() { UserName = "JSmith", Password = "123" };
 
-            //Assert
-            //Wait for the task to complete since we want the record to be created before the next step
-            _UserAccountRepo.CreateUserAccount(input).Wait();
+        //    //Assert
+        //    //Wait for the task to complete since we want the record to be created before the next step
+        //    _UserAccountRepo.CreateUserAccount(input).Wait();
 
-            var result = await _UserAccountRepo.UserLogin(userLoginInput);
+        //    var result = await _UserAccountRepo.UserLogin(userLoginInput);
 
-            //Act
-            Assert.NotNull(result);
-            Assert.Equal(result.UserName, input.UserName);
-            Assert.Equal(result.UserPassword, input.UserPassword);
-            Assert.Equal(result.UserGuid.ToString(), input.UserGuid);
-            Assert.Equal(result.EmployeeGuid.ToString(), input.EmployeeGuid);
-        }
+        //    //Act
+        //    Assert.NotNull(result);
+        //    Assert.Equal(result.UserName, input.UserName);
+        //    Assert.Equal(result.UserPassword, input.UserPassword);
+        //    Assert.Equal(result.UserGuid.ToString(), input.UserGuid);
+        //    Assert.Equal(result.EmployeeGuid.ToString(), input.EmployeeGuid);
+        //}
         
-        //TODO: Make this Fact Unit test expect an Exception to be thrown
-        [Fact]
-        public async Task CreateUserAccount_ThrowsException_UserNameExists()
-        {
-            //Arrange
-            var input = new CreateUserAccountDatabaseInput("JSmith", "123123123", "Manager", "Jay", "Smyth");
+        ////TODO: Make this Fact Unit test expect an Exception to be thrown
+        //[Fact]
+        //public async Task CreateUserAccount_ThrowsException_UserNameExists()
+        //{
+        //    //Arrange
+        //    var input = new CreateUserAccountDatabaseInput("JSmith", "123123123", "Manager", "Jay", "Smyth");
 
-            //Act
-           await _UserAccountRepo.CreateUserAccount(input);
+        //    //Act
+        //   await _UserAccountRepo.CreateUserAccount(input);
 
-            //Assert
-        }
+        //    //Assert
+        //}
     }
 }

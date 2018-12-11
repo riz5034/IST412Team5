@@ -15,16 +15,16 @@ namespace WorkHourTracker.Data.Test
             _projectManagerRepository = new ProjectManagerRepository();
         }
 
-        [Fact]
-        public async Task CreateNewProject_Success()
-        {
-            //Arrange
-            var input = new CreateProjectDatabaseInput("Project X", "X", "AVandelay");
+        //[Fact]
+        //public async Task CreateNewProject_Success()
+        //{
+        //    //Arrange
+        //    var input = new CreateProjectDatabaseInput("Project X", "X", "AVandelay");
 
-            //Act
-            await _projectManagerRepository.CreateNewProject(input);
-            //Assert
-        }
+        //    //Act
+        //    await _projectManagerRepository.CreateNewProject(input);
+        //    //Assert
+        //}
 
         [Fact]
         public async Task GetEmployeeSearch()

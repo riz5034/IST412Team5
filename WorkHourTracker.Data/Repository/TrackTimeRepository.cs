@@ -18,7 +18,7 @@ namespace WorkHourTracker.Data.Repository
         
         public TrackTimeRepository()
         {
-            _connectionString = @"Server=tcp:workhourtracker412.database.windows.net,1433;Initial Catalog=WorkHourTrackerDatabase;Persist Security Info=False;User ID=IST412WHTAdmin;Password=Team5WHT412;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+             _connectionString = "";
         }
 
         /// <summary>

@@ -16,7 +16,7 @@ namespace WorkHourTracker.Data.Repository
     {
         //the connection string to the Azure Database.
         //It is readonly as we do not want it to change once set
-        private readonly string _connectionString = @"Server=tcp:workhourtracker412.database.windows.net,1433;Initial Catalog=WorkHourTrackerDatabase;Persist Security Info=False;User ID=IST412WHTAdmin;Password=Team5WHT412;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private readonly string _connectionString = "";
 
         public async Task CreateNewProject(CreateProjectDatabaseInput input)
         {
